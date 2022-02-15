@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: send a message to chat in playbook
+      telegram:
+        token: '5076363065:AAFMMv1-o1Af1ukLv96822gTXQj2b_bSNVY'
+        chat_id: -612905976
+        msg: " {{ war_file }} success deployed, Please contact UAT team"
+
