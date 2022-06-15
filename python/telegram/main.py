@@ -1,11 +1,10 @@
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
-from telegram.ext import Updater, CommandHandler, CallbackQueryHandler, CallbackContext
-
-import telegram.ext
+import telegram.ext 
+import requests
+import http.client
+import ssl
+import subprocess
 
 TOKEN = "5591863640:AAHqDldhR_IeWV8vvegVa3zsnJ_947XBt0s"
-#with open('token.tx', 'r') as f:
-#    TOKEN = f.read()
 
 def start(update, context):
     update.message.reply_text("""
@@ -18,10 +17,9 @@ def start(update, context):
     /Capture_grafana_NDS -> Capture dashboard live AADC NDS
     /contact -> DAO on duty
     """)
-
-
 def Restart_QRIS_service(update, context):
-    update.message.reply_text("Maaf, Fitur ini masih dalam tahap pengembangan T_T")
+    update.message.reply_text("running restart service QRIS")
+    p = subprocess.run(['python', 'python_2.py', 'shell=True'])
 
 def Capture_grafana_NDS(update, context):
     update.message.reply_text("Maaf, Fitur ini masih dalam tahap pengembangan T_T")
