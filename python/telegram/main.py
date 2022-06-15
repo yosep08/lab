@@ -19,7 +19,7 @@ def start(update, context):
     """)
 def Restart_QRIS_service(update, context):
     update.message.reply_text("running restart service QRIS")
-    p = subprocess.run(['python', 'python_2.py', 'shell=True'])
+    p = subprocess.run(['python','python_2.py', 'shell=True'])
 
 def Capture_grafana_NDS(update, context):
     update.message.reply_text("Maaf, Fitur ini masih dalam tahap pengembangan T_T")
